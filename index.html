@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://hoonzee.com/wp-content/uploads/cropped-hoonzee-symbol-88x88.png" sizes="32x32" />
+
+    <title>Email Signature App</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style type="text/css">
+        /* GENERAL */
+        body {
+          padding: 60px 0 30px 0;
+        }
+        .cloaked{
+            display: none;
+        }
+
+        /* HEADER */
+        .navbar.navbar-fixed-top{
+            background-color: #444;
+            border-bottom: 2px solid turquoise;
+        }
+        .navbar-nav>li>a{
+            color: #fff;
+            font-size: 16px;
+        }
+        .navbar-nav>li>a:hover{
+            color: #fff;
+            background-color: #FAA61A;
+        }
+        .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
+            color: #444;
+            background-color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        /* CONTENT */
+        section {
+          padding: 20px 15px 40px 15px;
+          border-bottom: 1px solid #ddd;
+        }
+        section p{
+            font-size: 16px;
+        }
+        section .lead{
+            margin-bottom: 10px;
+        }
+        form{
+            margin-bottom: 40px;
+        }
+        #table-wrap{
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        footer{
+            padding-top: 40px
+        }
+    </style>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Email Signatures</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#generate">Generate your signature</a></li>
+            <li><a href="#how-tos">How to's</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <!-- GENERATE -->
+      <section id="generate" class="main-container">
+        <h1>Generate your Email Signature</h1>
+        <p class="lead">Fill in the form below and then copy your Email Signature into your Email Client eg: Apple Mail or Microsoft Outlook.</p>
+
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="your_name" class="control-label col-sm-2">Your Name</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="your_name" value="Your Name" placeholder="Your Name">
+            </div>
+            <label for="job_title" class="control-label col-sm-2">Job Title</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="job_title" value="Job Title" placeholder="Job Title">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone_number_1" class="control-label col-sm-2">Phone Type 1</label>
+            <div class="col-sm-4">
+                <select class="form-control" id="phone_type_1">
+                  <option value="">Select an option</option>
+                  <option value="Office" selected>Office</option>
+                  <option value="DDI">DDI</option>
+                  <option value="Mobile">Mobile</option>
+                </select>
+            </div>
+            <label for="phone_number_1" class="control-label col-sm-2">Phone Number 1</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="phone_number_1" value="123 4567" placeholder="Phone Number 1">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone_number_1" class="control-label col-sm-2">Phone Type 2</label>
+            <div class="col-sm-4">
+                <select class="form-control" id="phone_type_2">
+                  <option value="">Select an option</option>
+                  <option value="Office">Office</option>
+                  <option value="DDI">DDI</option>
+                  <option value="Mobile">Mobile</option>
+                </select>
+            </div>
+            <label for="phone_number_2" class="control-label col-sm-2">Phone Number 2</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="phone_number_2" placeholder="Phone Number 2">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email_address" class="control-label col-sm-2">Email address</label>
+            <div class="col-sm-4">
+                <input type="email" class="form-control" id="email_address" value="info@emailaddress.com" placeholder="Email">
+            </div>
+            <label for="company" class="control-label col-sm-2">Company Name</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="company" value="Company Name" placeholder="Company Name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="address" class="control-label col-sm-2">Address</label>
+            <div class="col-sm-4">
+                <textarea class="form-control" rows="4" cols="50" id="address" value="Your company address" placeholder="Your company address"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="button" class="btn btn-primary">Generate Signature</button>
+            </div>
+          </div>
+        </form>
+
+        <div id="table-wrap">
+            <!-- Generated Signature -->
+            <table border="0" cellpadding="0" cellspacing="0" width="600">
+                <tbody>
+                    <tr>
+                        <td>
+                            <span style="font-size: 13px; font-family: sans-serif;" class="your_name">Your Name</span>
+                            <span style="font-size: 13px; font-family: sans-serif;">&nbsp;|&nbsp;</span>
+                            <strong style="font-size: 13px; font-family: sans-serif;" class="job_title">Job Title</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong style="font-size: 13px; font-family: sans-serif;" class="phone_type_1">Office:</strong>
+                            <span style="font-size: 13px; font-family: sans-serif;" class="phone_number_1">123 4567</span>
+
+                            <span style="font-size: 13px; font-family: sans-serif;" class="phone_2_wrap cloaked">
+                                <span style="font-size: 13px; font-family: sans-serif;">&nbsp;|&nbsp;</span>
+                                <strong style="font-size: 13px; font-family: sans-serif;" class="phone_type_2"></strong> <span style="font-size: 13px; font-family: sans-serif;" class="phone_number_2"></span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong style="font-size: 13px; font-family: sans-serif;">Email: </strong>
+                            <a style="font-size: 13px; font-family: sans-serif;" href="mailto:info@emailaddress.com" class="email_address">info@emailaddress.com</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong class="your_company">Your Awesome Company</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table border="0" cellpadding="0" cellspacing="0" width="70%">
+                                <tbody>
+                                    <tr>
+                                        <td valign="top">
+                                            <p class="address" style="font-size: 11px; font-family: sans-serif; line-height: 1.5; margin: 0;">
+                                              22 Rainbow Bridge Street, Westchester, <br>
+                                              New Windsor, <br>
+                                              2010
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <button class="btn btn-success btn-copy" data-clipboard-action="copy" data-clipboard-target="#table-wrap">Copy Signature</button>
+      </section>
+
+      <!-- HOW TOs -->
+      <section id="how-tos" class="main-container">
+        <h1>How to add this to your Email client</h1>
+        <p class="lead">Follow these guides to include your Email Signature to your emails.</p>
+        <p>Once you have copied your Email Signature, head over to your Email Client. Apple Mail or Microsoft Outlook</p>
+        <p><strong>Apple Mail</strong></p>
+        <ul>
+            <li>Go to Mail/ Preferences</li>
+            <li>Click on the Signatures tab</li>
+            <li>Click on the Trends Signatures</li>
+            <li>Click on the + sign</li>
+            <li>Give your signature a name and then paste your copied signature into the white pane</li>
+            <li>Now that your signature is ready, choose it from the Choose Signature drop down</li>
+            <li>Start a new email and check that your Email Signature is appearing correctly</li>
+        </ul>
+        <p><strong>Microsoft Outlook</strong></p>
+        <ul>
+            <li>Go to Outlook/ Preferences</li>
+            <li>Click on the Signatures tab</li>
+            <li>Click on the + sign</li>
+            <li>Give your signature a name and then paste your copied signature into the white pane</li>
+            <li>Now that your signature is ready, click on Default Signature</li>
+            <li>Under the Default column, choose your signature and click OK</li>
+            <li>Start a new email and check that your Email Signature is appearing correctly</li>
+        </ul>
+      </section>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Clipboard JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.13/clipboard.min.js"></script>
+
+    <!-- Instantiate Clipboard JS -->
+    <script>
+    var clipboard = new Clipboard('.btn-copy');
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    </script>
+
+    <!-- APP FUNCTIONS -->
+    <script>
+        $( document ).ready(function() {
+            $('form button').on('click', function(){
+
+                // define data sources
+                var yourName = $('#your_name').val();
+                var jobTitle = $('#job_title').val();
+                var phoneType1 = $('#phone_type_1').val();
+                var phoneNumber1 = $('#phone_number_1').val();
+                var phoneType2 = $('#phone_type_2').val();
+                var phoneNumber2 = $('#phone_number_2').val();
+                var emailAddress = $('#email_address').val();
+                var company = $('#company').val();
+                var address = $('#address').val().replace(/\n/gi,'<br />');
+
+                // only show the second phone number info if the type has been selected
+                if ( $('#phone_type_2').val() ) {
+                    $('.phone_2_wrap').show();
+                }
+
+                // populate the tables contents with data
+                $('.your_name').text(yourName);
+                $('.job_title').text(jobTitle);
+                // only show phoneType1 if value is selected
+                if ( $('#phone_type_1').val() ) {
+                    $('.phone_type_1').text(phoneType1 + ':');
+                }
+                $('.phone_number_1').text(phoneNumber1);
+                $('.phone_type_2').text(phoneType2 + ':');
+                $('.phone_number_2').text(phoneNumber2);
+                $('.email_address').attr('href', 'mailto:' + emailAddress);
+                $('.email_address').text(emailAddress);
+                $('.your_company').text(company);
+                $('.address').html(address);
+
+
+            });
+        });
+    </script>
+  </body>
+</html>
